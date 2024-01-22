@@ -1,47 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>ai-html-components</title>
-		<link rel="stylesheet" href="assets/css/main.css">
-	</head>
-	<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ai-html-components</title>
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body>
 
-		<div class="page">
-			<h1>Hello, world!</h1>
-			<p>If you are in the midst of development and want to bypass the need to sign your extensions, you can
-				bypass the check for extension signatures by editing the CSXS preference properties file, located
-				at:</p>
-			<button class="btn" id="reload_btn">Reset</button>
-		</div>
+        <div class="page">
+            <h1>By, world!</h1>
+            <p>If you are in the midst of development and want to bypass the need to sign your extensions, you can
+                bypass the check for extension signatures by editing the CSXS preference properties file, located
+                at:</p>
+            <button class="btn" id="reload_btn">Reset</button>
+        </div>
 
-		<script>
-         loadScript("assets/js/CSInterface.js")
-          .then(script => loadScript("assets/js/newCSInterface.js"))
-          .then(script => loadScript("assets/js/themeChanger.js"))
-          .then(script => loadScript("assets/js/fitPanelToContent.js"))
-          .then(script => loadScript("assets/js/reloadPanel.js"))
-          .then(script => {
-           // скрипты загружены, мы можем использовать объявленные в них функции
-           fitPanelToContent();
-           changeTheme(csInterface);
-           let reloadButton = document.getElementById("reload_btn");
-           reloadButton.addEventListener('click', reloadPanel);
-          });
-
-         function loadScript(src) {
-          return new Promise(function (resolve, reject) {
-           let script = document.createElement('script');
-           script.src = src;
-
-           script.onload = () => resolve(script);
-           script.onerror = () => reject(new Error(`Ошибка загрузки скрипта ${src}`));
-
-           document.head.append(script);
-          });
-         }
-		</script>
-
-	</body>
+		<script src="assets/js/CSInterface.js"></script>
+		<script src="assets/js/newCSInterface.js"></script>
+		<script src="assets/js/themeChanger.js"></script>
+		<script src="assets/js/fitPanelToContent.js"></script>
+		<script src="assets/js/reloadPanel.js"></script>
+		<script defer src="assets/js/main.js"></script>
+    </body>
 </html>
