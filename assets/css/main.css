@@ -1,0 +1,44 @@
+@import "normalize.css";
+@import "fonts.css";
+@import "../../components/page/page.css";
+@import "../../components/button/button.css";
+
+:root {
+ /**
+ * variables
+ */
+ --white: white;
+ --grey-1: #888888;
+ --black-1: #222222;
+ --blue-1: blue;
+
+ --bg-darker: #323232;
+ --bg-dark: #535353;
+ --bg-light: #b8b8b8;
+ --bg-lighter: #f0f0f0;
+
+ /**
+ * variables sematic layer
+ */
+
+ --color-primary: var(--black-1);
+ --color-invert: var(--white);
+
+ --button-primary: var(--blue-1);
+}
+
+html[data-theme-dark] {
+ /**
+ * switch to dark theme if Illustrator theme is dark
+ */
+ /**
+ * variables semantic layer
+ */
+
+ --color-primary: var(--white);
+}
+
+body {
+ font-family: "Source Sans Pro", sans-serif;
+ overflow-y: hidden; /* for correct work fitPanelToContent() */
+}

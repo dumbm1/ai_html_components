@@ -1,0 +1,17 @@
+.btn {
+ background: var(--button-primary);
+ color: var(--color-invert);
+ font-weight: 200;
+ cursor: pointer;
+ transition: transform 200ms ease-in-out;
+ border: none;
+}
+
+.btn:disabled {
+ opacity: 0.5;
+ pointer-events: none;
+}
+
+.btn:active {
+ transform: translateY(-1px);
+}
