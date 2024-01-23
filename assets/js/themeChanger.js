@@ -12,6 +12,9 @@ function changeTheme(csInterface) {
   let fontSize = appSkinInfo.baseFontSize;
   let appBgColor = appSkinInfo.panelBackgroundColor.color;
   let html = document.documentElement;
+  let fontFam = appSkinInfo.baseFontFamily;
+
+  console.log(appBgColor);
 
   document.body.style.fontSize = fontSize + 'px';
 

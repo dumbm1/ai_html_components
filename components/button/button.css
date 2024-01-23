@@ -1,10 +1,11 @@
 .btn {
- background: var(--button-primary);
+ background: var(--bg-light);
  color: var(--color-invert);
- font-weight: 200;
+ font-weight: 400;
+ height: 4rem;
  cursor: pointer;
  transition: transform 200ms ease-in-out;
- border: none;
+ border: 1px solid var(--grey-20);
 }
 
 .btn:disabled {
