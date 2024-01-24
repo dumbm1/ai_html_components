@@ -1,11 +1,15 @@
 .btn {
- background: var(--bg-light);
- color: var(--color-invert);
+ background: var(--button-primary);
+ color: var(--color-primary);
  font-weight: 400;
- height: 4rem;
+ height: 2rem;
  cursor: pointer;
  transition: transform 200ms ease-in-out;
- border: 1px solid var(--grey-20);
+ border: 1px solid var(--border-primary);
+ border-radius: .3rem;
+ padding: 0;
+ padding-left: 1.4rem;
+ padding-right: 1.4rem;
 }
 
 .btn:disabled {
@@ -15,4 +19,8 @@
 
 .btn:active {
  transform: translateY(-1px);
+}
+
+.btn:hover{
+ background: var(--button-hover);
 }

@@ -40,6 +40,7 @@
                 <Resources>
                     <MainPath>./index.html</MainPath>
                     <ScriptPath>./jsx/hostscript.jsx</ScriptPath>
+                    <ComponentPath>./components/button/button.html</ComponentPath>
                     <CEFCommandLine>
                         <Parameter>--enable-nodejs</Parameter>
                         <Parameter>--mixed-context</Parameter>
