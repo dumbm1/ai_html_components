@@ -11,16 +11,16 @@
  --black: #000000;
  --white: #ffffff;
 
- --grey-0-9: #fafafa;
- --grey-1-9: #c5c5c5;
- --grey-2-9: #626262;
- --grey-3-4: #828282; /* rgb 130 */
- --grey-3-9: #3f3f3f;
+ --grey-0-9: #fafafa; /* hover for --grey-1-0 */
+ --grey-1-9: #c5c5c5; /* hover for --grey-2-0 */
+ --grey-2-4: #828282; /* borders for light, dark and darker themes, rgb 130 */
+ --grey-2-9: #626262; /* hover for --grey-3-0 */
+ --grey-3-9: #3f3f3f; /* hover for --grey-4-0 */
 
  --blue-1: #008cff;
  --blue-2: #0064ff;
 
- --error: #ff3d00;
+ --error: #E83700;
  --success-1: #00d709;
  --success-2: #00ff0a;
  --info-1: #0085ff;
@@ -40,9 +40,9 @@
  --color-darker-theme: var(--grey-1-0);
 
  --border-lighter-theme: var(--grey-2-0);
- --border-light-theme: var(--grey-3-4);
- --border-dark-theme: var(--grey-3-4);
- --border-darker-theme: var(--grey-3-4);
+ --border-light-theme: var(--grey-2-4);
+ --border-dark-theme: var(--grey-2-4);
+ --border-darker-theme: var(--grey-2-4);
 
  /**
  * Second semantic layer of the color variables
@@ -125,61 +125,3 @@ html[data-theme='darker'] {
  --success: var(--success-2);
  --info: var(--info-2);
 }
-
-/*
-html[data-theme-light] {
- --bg-primary: var(--bg-light-theme);
- --bg-secondary: var(--white); !** form text fields, hover elements *!
- --bg-alternate: var(--bg-dark-theme); !** selected elements *!
- --bg-invert: var(--bg-darker-theme); !** checkbox *!
-
- --color-primary: var(--black);
- --color-secondary: var(--color-lighter-theme);
- --color-invert: var(--color-darker-theme);
-
- --button-primary: var(--bg-light-theme);
- --button-hover: var(--grey-30);
-
- --border-primary: var(--border-light-theme);
-
- --success: var(--success-2);
- --info: var(--info-1);
-}
-
-html[data-theme-dark] {
- --bg-primary: var(--bg-dark-theme);
- --bg-secondary: var(--black); !** form text fields, hover elements *!
- --bg-alternate: var(--bg-light-theme); !** selected elements *!
- --bg-invert: var(--bg-lighter-theme); !** checkbox *!
-
- --color-primary: var(--white);
- --color-secondary: var(--color-darker-theme);
- --color-invert: var(--color-lighter-theme);
-
- --button-primary: var(--bg-dark-theme);
- --button-hover: var(--grey-40);
-
- --border-primary: var(--border-dark-theme);
-
- --success: var(--success-2);
- --info: var(--info-2);
-}
-
-html[data-theme-darker] {
- --bg-primary: var(--bg-darker-theme);
- --bg-secondary: var(--black); !** form text fields, hover elements *!
- --bg-alternate: var(--bg-light-theme); !** selected elements *!
- --bg-invert: var(--bg-lighter-theme); !** checkbox *!
-
- --color-primary: var(--white);
- --color-secondary: var(--color-darker-theme);
- --color-invert: var(--color-lighter-theme);
-
- --button-primary: var(--bg-darker-theme);
- --button-hover: var(--grey-40);
-
- --border-primary: var(--border-darker-theme);
-
- --success: var(--success-2);
- --info: var(--info-2);
-}*/
