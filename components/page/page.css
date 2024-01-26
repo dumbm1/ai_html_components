@@ -6,4 +6,9 @@
  /*align-items:flex-start;*/
  background-color: var(--bg-primary);
  box-sizing: border-box;
+ padding: .5rem;
+}
+.page__wrapper {
+ border: 1px solid var(--border-secondary);
+ padding: .2rem;
 }
