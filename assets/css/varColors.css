@@ -55,7 +55,7 @@
  --bg-alternate: var(--bg-dark-theme); /** selected elements */
  --bg-invert: var(--bg-darker-theme); /** checkbox */
 
- --color-primary: var(--black);
+ --color-primary: var(--color-lighter-theme);
  --color-secondary: var(--color-lighter-theme);
  --color-invert: var(--color-darker-theme);
 

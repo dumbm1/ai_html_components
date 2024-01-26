@@ -1,8 +1,9 @@
 .page{
  display: flex;
  flex-direction: column;
- justify-content: flex-start;
+ /*justify-content: flex-start;*/
  color: var(--color-primary);
- align-items:flex-start;
+ /*align-items:flex-start;*/
  background-color: var(--bg-primary);
+ box-sizing: border-box;
 }

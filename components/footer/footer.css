@@ -1,0 +1,8 @@
+.footer {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+ justify-content: flex-end;
+ gap: .5rem;
+ padding-right: 1.5rem;
+}
