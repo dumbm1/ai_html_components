@@ -1,8 +1,15 @@
 .footer {
- display: flex;
+/* display: flex;
  flex-direction: row;
- flex-wrap: nowrap;
- justify-content: flex-end;
+ flex-wrap: nowrap;*/
+ display: grid;
+ grid-template-columns: 1fr repeat(4, auto);
+ justify-content: end;
+ align-items: center;
  gap: .5rem;
- padding-right: 1.5rem;
+ padding: .3rem 1.5rem .3rem .3rem;
+}
+
+.footer_j-s-start {
+ justify-self: start;
 }

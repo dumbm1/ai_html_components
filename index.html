@@ -1,39 +1,59 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ai-html-components</title>
-        <link rel="stylesheet" href="assets/css/main.css">
-    </head>
-    <body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>ai-html-components</title>
+		<link rel="stylesheet" href="assets/css/main.css">
+	</head>
+	<body>
 
-        <div class="page">
-            <div class="page__wrapper">
-                <h1>By, world!</h1>
-                <p>If you are in the midst of development and want to bypass the need to sign your extensions, you
-                    can
-                    bypass the check for extension signatures by editing the CSXS preference properties file,
-                    located
-                    at:</p>
-                <button class="btn" id="reload_btn">Reset</button>
-            </div>
+		<div class="page">
+			<div class="page__section">
+				<span>Главная секция</span>
+				<div class="page__line-sep"></div>
+			</div>
 
-            <footer class="footer">
-                <svg class="icon">
-                    <use href="assets/img/serviceIcon/iconSprite.svg#github"></use>
-                </svg>
-                <svg class="icon">
-                    <use href="assets/img/serviceIcon/iconSprite.svg#tooltip"></use>
-                </svg>
-            </footer>
-        </div>
+			<div class="page__section">
+				<div class="accordion">
+					<details class="accordion__details">
+						<summary class="accordion__summary">
+							Секция установок
+							<!--<svg class="icon accordion__arrow-down">
+								<use href="assets/img/serviceIcon/iconSprite.svg#arrow-down"></use>
+							</svg>-->
+						</summary>
+						<p class="accordion__content">
+							🛠 Раньше было затруднительно прижать футер к нижнему краю экрана вне зависимости от
+							количества контента на странице. Приходилось идти на всякие ухищрения и городить костыли.
+							Теперь с появлением флексов всё стало просто.
+						</p>
+					</details>
+				</div>
+				<div class="page__line-sep"></div>
+			</div>
+			<footer class="footer">
+				<span class="footer_j-s-start">button section</span>
+				<svg class="icon">
+					<use href="assets/img/serviceIcon/iconSprite.svg#list"></use>
+				</svg>
+				<svg class="icon">
+					<use href="assets/img/serviceIcon/iconSprite.svg#github"></use>
+				</svg>
+				<svg class="icon">
+					<use href="assets/img/serviceIcon/iconSprite.svg#tooltip"></use>
+				</svg>
+				<button class="btn " id="reload_btn">Reload</button>
+			</footer>
 
-        <script src="assets/js/CSInterface.js"></script>
-        <script src="assets/js/newCSInterface.js"></script>
-        <script src="assets/js/themeChanger.js"></script>
-        <script src="assets/js/fitPanelToContent.js"></script>
-        <script src="assets/js/reloadPanel.js"></script>
-        <script defer src="assets/js/main.js"></script>
-    </body>
+		</div>
+
+		<script src="assets/js/CSInterface.js"></script>
+		<script src="assets/js/newCSInterface.js"></script>
+		<script src="assets/js/themeChanger.js"></script>
+		<script src="assets/js/accordion.js"></script>
+		<script src="assets/js/fitPanelToContent.js"></script>
+		<script src="assets/js/reloadPanel.js"></script>
+		<script defer src="assets/js/main.js"></script>
+	</body>
 </html>

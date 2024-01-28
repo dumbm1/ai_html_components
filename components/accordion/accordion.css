@@ -1,0 +1,23 @@
+.accordion {
+}
+
+.accordion__details {
+}
+
+.accordion__summary {
+}
+
+/** В иллюстраторе стрелку по умолчанию убрать нельзя - правило не работает */
+.accordion__summary:-webkit-details-marker { /* нестандартный псевдоэлемент Google Chrome */
+ display: none;
+}
+
+.accordion__content {
+}
+
+
+
+/*.accordion:active, .accordion__summary:active, accordion__details:active,*/
+.accordion:focus, .accordion__summary:focus, accordion__details:focus {
+ outline: none;
+}
