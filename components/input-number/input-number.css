@@ -1,0 +1,52 @@
+input[type="number"]::-webkit-inner-spin-button, /* hide native arrows */
+input[type="number"]::-webkit-outer-spin-button {
+ /*-webkit-*/
+ appearance: none;
+ margin: 0;
+}
+
+.input-number {
+ position: relative;
+ display: inline-block;
+}
+
+.input-number__field {
+ height: 2rem;
+ background: var(--input-gb);
+ color: var(--color-primary);
+ border: 1px solid var(--border-primary);
+ border-radius: .2rem;
+ font-weight: 400;
+ padding: 0 0 0 4.5rem;
+ box-sizing: border-box;
+}
+
+.input-number__btn {
+ height: 1.8rem;
+ width: 1.8rem;
+ position: absolute;
+ top:1px;
+}
+.input-number__btn_plus {
+ left:1px;
+}
+.input-number__btn_minus {
+ left: 1.9rem;
+}
+.input-number:active {
+ outline: none;
+}
+
+.input-number__field:focus {
+ background: var(--input-bg-active);
+ border: 1px solid var(--border-active);
+ outline: none;
+}
+
+.input-number:disabled {
+ opacity: 0.5;
+ pointer-events: none;
+}
+
+
+
