@@ -64,6 +64,8 @@
 
  --input-bg: var(--input-lighter-theme);
  --input-bg-active: var(--input-lighter-theme);
+ --input-color: var(--color-lighter-theme);
+ --input-color-active: var(--color-lighter-theme);
 
  --color-primary: var(--color-lighter-theme);
  --color-secondary: var(--color-lighter-theme);
@@ -87,6 +89,7 @@ html[data-theme='light'] {
  --bg-invert: var(--bg-darker-theme); /** checkbox */
 
  --input-bg: var(--input-light-theme);
+ --input-color: var(--color-light-theme);
 
  --color-primary: var(--black);
  --color-secondary: var(--color-lighter-theme);
@@ -113,6 +116,7 @@ html[data-theme='dark'] {
  --color-invert: var(--color-lighter-theme);
 
  --input-bg: var(input-dark-theme);
+ --input-color: var(--color-darker-theme);
 
  --button-primary: var(--bg-dark-theme);
  --button-hover: var(--grey-2-9);
@@ -135,6 +139,7 @@ html[data-theme='darker'] {
  --color-invert: var(--color-lighter-theme);
 
  --input-bg: var(input-darker-theme);
+ --input-color: var(--color-darker-theme);
 
  --button-primary: var(--bg-darker-theme);
  --button-hover: var(--grey-3-9);
