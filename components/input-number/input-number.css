@@ -21,18 +21,29 @@ input[type="number"]::-webkit-outer-spin-button {
  box-sizing: border-box;
 }
 
-.input-number__btn {
+.input-number__btn, .input-number__select {
  height: 1.8rem;
  width: 1.8rem;
  position: absolute;
- top:1px;
+ top: 1px;
 }
+
 .input-number__btn_plus {
- left:1px;
+ left: 1px;
 }
+
 .input-number__btn_minus {
  left: 1.9rem;
 }
+
+.input-number__btn_arrow {
+ right: 1px;
+}
+
+.input-number__select {
+ right: 1px;
+}
+
 .input-number:active {
  outline: none;
 }
