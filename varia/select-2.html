@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>select-2</title>
+        <style>
+         .select {
+          position: relative;
+          height: 40px;
+          width: 100%;
+         }
+
+         .select__open {
+          position: absolute;
+         }
+
+         .select__elem {
+          position: absolute;
+         }
+        </style>
+    </head>
+    <body>
+
+        <div class="select">
+
+            <select class="select__elem">
+                <option></option>
+                <option>one</option>
+                <option>tho</option>
+                <option>three</option>
+                <option>four</option>
+                <option>five</option>
+            </select>
+
+            <button class="select__open">open select</button>
+
+        </div>
+
+        <h2>lalalalala</h2>
+
+        <script>
+          openSelect();
+
+          function openSelect() {
+            let openSelect = document.querySelector('.select__open');
+
+            let selectElement = document.querySelector('.select__elem');
+
+            openSelect.onclick = () => {
+              if (selectElement.hasAttribute('open')) {
+                // selectElement.removeAttribute('open');
+                selectElement.size = 1;
+              } else {
+                selectElement.setAttribute('open', '');
+                selectElement.size = selectElement.length;
+                selectElement.focus();
+              }
+
+            };
+              /*           selectElement.onchange = () => {
+               if (selectElement.hasAttribute('open')) {
+               selectElement.removeAttribute('open');
+               selectElement.size = 1;
+               }
+               };*/
+              /*selectElement.onclick = () => {
+               selectElement.size = 1;
+               };*/
+            selectElement.onblur = () => {
+              selectElement.size = 1;
+              selectElement.removeAttribute('open');
+            };
+          }
+
+        </script>
+    </body>
+</html>

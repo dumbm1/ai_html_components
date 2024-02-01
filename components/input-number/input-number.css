@@ -41,7 +41,13 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .input-number__select {
- right: 1px;
+ right: -2rem;
+ height: 2rem;
+ width: 2rem;
+ border: 1px solid var(--border-primary);
+ outline: none;
+ box-sizing: border-box;
+ top: 0;
 }
 
 .input-number:active {
