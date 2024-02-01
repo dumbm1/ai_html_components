@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>select-2</title>
-        <style>
+	<head>
+		<meta charset="UTF-8">
+		<title>select-2</title>
+		<style>
          .select {
           position: relative;
           height: 40px;
@@ -17,61 +17,84 @@
          .select__elem {
           position: absolute;
          }
-        </style>
-    </head>
-    <body>
+		</style>
+	</head>
+	<body>
 
-        <div class="select">
+		<div class="select">
 
-            <select class="select__elem">
-                <option></option>
-                <option>one</option>
-                <option>tho</option>
-                <option>three</option>
-                <option>four</option>
-                <option>five</option>
-            </select>
+			<select class="select__elem">
+				<option></option>
+				<option selected>one</option>
+				<option>tho</option>
+				<option>three</option>
+				<option>four</option>
+				<option>five</option>
+			</select>
 
-            <button class="select__open">open select</button>
+			<button class="select__open">open select</button>
 
-        </div>
+		</div>
 
-        <h2>lalalalala</h2>
+		<h2>lalalalala</h2>
 
-        <script>
-          openSelect();
+		<script>
+         openSelect();
 
-          function openSelect() {
-            let openSelect = document.querySelector('.select__open');
+         function openSelect() {
+          let buttonOpen = document.querySelector('.select__open');
+          let selectElement = document.querySelector('.select__elem');
 
-            let selectElement = document.querySelector('.select__elem');
+          let buttonClick = 0;
+          let buttonBlur = 0;
+          let buttonFocus = 0;
+          let selectBlur = 0;
+          let selectFocus = 0;
 
-            openSelect.onclick = () => {
-              if (selectElement.hasAttribute('open')) {
-                // selectElement.removeAttribute('open');
-                selectElement.size = 1;
-              } else {
-                selectElement.setAttribute('open', '');
-                selectElement.size = selectElement.length;
-                selectElement.focus();
-              }
 
-            };
-              /*           selectElement.onchange = () => {
-               if (selectElement.hasAttribute('open')) {
-               selectElement.removeAttribute('open');
-               selectElement.size = 1;
-               }
-               };*/
-              /*selectElement.onclick = () => {
-               selectElement.size = 1;
-               };*/
-            selectElement.onblur = () => {
-              selectElement.size = 1;
-              selectElement.removeAttribute('open');
-            };
-          }
+          buttonOpen.onclick = (e) => {
+           console.log(`button click ${++buttonClick} (${e}) ${e.target}`);
 
-        </script>
-    </body>
+           if (!selectElement.hasAttribute('open')) {
+            selectElement.focus();
+
+           } else {
+            selectElement.size = 1;
+            selectElement.removeAttribute('open');
+            // selectElement.blur();
+
+           }
+          };
+
+          buttonOpen.onblur = (e) => {
+           console.log(`button blur ${++buttonBlur} (${e}) ${e.target}`);
+          };
+          buttonOpen.onfocus = (e) => console.log(`button focus ${++buttonFocus} (${e}) ${e.target}`);
+			 /*           selectElement.onchange = () => {
+			  if (selectElement.hasAttribute('open')) {
+			  selectElement.removeAttribute('open');
+			  selectElement.size = 1;
+			  }
+			  };*/
+			 /*selectElement.onclick = () => {
+			  selectElement.size = 1;
+			  };*/
+
+          selectElement.onblur = (e) => {
+           console.log(`select blur ${++selectBlur} (${e}) ${e.target}`);
+
+           selectElement.size = 1;
+           // selectElement.removeAttribute('open');
+          };
+          selectElement.onfocus = (e) => {
+           console.log(`select focus ${++selectFocus}  (${e}) ${e.target}`);
+           selectElement.size = selectElement.length;
+           selectElement.setAttribute('open', '');
+          };
+
+         }
+
+		</script>
+
+	</body>
 </html>
