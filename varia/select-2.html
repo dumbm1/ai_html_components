@@ -4,6 +4,14 @@
 		<meta charset="UTF-8">
 		<title>select-2</title>
 		<style>
+
+/*         html, body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+         }*/
+
          .select {
           position: relative;
           height: 40px;
@@ -16,6 +24,13 @@
 
          .select__elem {
           position: absolute;
+          overflow-y: auto;
+          min-width: 60px;
+          outline: none;
+         }
+
+         .select__elem option {
+          padding-top: 3px;
          }
 		</style>
 	</head>
@@ -25,25 +40,60 @@
 
 			<select class="select__elem">
 				<option></option>
-				<option selected>one</option>
-				<option>tho</option>
-				<option>three</option>
-				<option>four</option>
-				<option>five</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option selected>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
 			</select>
 
-			<button class="select__open">open select</button>
+			<button class="select__open">buttonOpen</button>
 
 		</div>
 
 		<h2>lalalalala</h2>
+		<p></p>
 
 		<script>
-         openSelect();
+         openSelect({
+                     btnOpen: document.querySelector('.select__open'),
+                     elemSelect: document.querySelector('.select__elem'),
+                    });
 
-         function openSelect() {
+         function openSelect(opts) {
+          let btnOpen = opts.btnOpen;
+          let elemSelect = opts.elemSelect;
+          let attrSelectOpen = 'data-select-open';
+
+          document.addEventListener('click', (e) => {
+
+           if (e.target == btnOpen) {
+            if (!elemSelect.hasAttribute(attrSelectOpen)) {
+             elemSelect.focus();
+             elemSelect.size = /*6 ||*/ elemSelect.length;
+             elemSelect.setAttribute(attrSelectOpen, '');
+            } else {
+             elemSelect.size = 1;
+             elemSelect.removeAttribute(attrSelectOpen);
+            }
+           } else {
+            console.log(`${e.target}`);
+            elemSelect.size = 1;
+            elemSelect.removeAttribute(attrSelectOpen);
+           }
+          });
+
+         }
+
+         function openSelect__v1_0() {
           let buttonOpen = document.querySelector('.select__open');
           let selectElement = document.querySelector('.select__elem');
+          let bodyElement = document.querySelector('body');
 
           let buttonClick = 0;
           let buttonBlur = 0;
@@ -51,9 +101,8 @@
           let selectBlur = 0;
           let selectFocus = 0;
 
-
           buttonOpen.onclick = (e) => {
-           console.log(`button click ${++buttonClick} (${e}) ${e.target}`);
+           console.log(`button click №${++buttonClick}, e = (${e}), target = ${e.target}`);
 
            if (!selectElement.hasAttribute('open')) {
             selectElement.focus();
@@ -61,16 +110,29 @@
            } else {
             selectElement.size = 1;
             selectElement.removeAttribute('open');
-            // selectElement.blur();
 
            }
           };
 
           buttonOpen.onblur = (e) => {
-           console.log(`button blur ${++buttonBlur} (${e}) ${e.target}`);
+           console.log(`button blur №${++buttonBlur}, e = (${e}), target = ${e.target}`);
           };
-          buttonOpen.onfocus = (e) => console.log(`button focus ${++buttonFocus} (${e}) ${e.target}`);
-			 /*           selectElement.onchange = () => {
+          buttonOpen.onfocus = (e) => console.log(`button focus №${++buttonFocus}, e = (${e}), target = ${e.target}`);
+
+          selectElement.onblur = (e) => {
+           console.log(`select blur №${++selectBlur}, e = (${e}), target = ${e.target}`);
+
+           selectElement.size = 1;
+           // selectElement.removeAttribute('open');
+          };
+          selectElement.onfocus = (e) => {
+           console.log(`select focus №${++selectFocus}, e = (${e}), target = ${e.target}`);
+           selectElement.size = selectElement.length;
+           selectElement.setAttribute('open', '');
+          };
+
+			 /*
+			  selectElement.onchange = () => {
 			  if (selectElement.hasAttribute('open')) {
 			  selectElement.removeAttribute('open');
 			  selectElement.size = 1;
@@ -78,19 +140,8 @@
 			  };*/
 			 /*selectElement.onclick = () => {
 			  selectElement.size = 1;
-			  };*/
-
-          selectElement.onblur = (e) => {
-           console.log(`select blur ${++selectBlur} (${e}) ${e.target}`);
-
-           selectElement.size = 1;
-           // selectElement.removeAttribute('open');
-          };
-          selectElement.onfocus = (e) => {
-           console.log(`select focus ${++selectFocus}  (${e}) ${e.target}`);
-           selectElement.size = selectElement.length;
-           selectElement.setAttribute('open', '');
-          };
+			  };
+			  */
 
          }
 
