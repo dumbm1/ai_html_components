@@ -33,7 +33,7 @@ EvalScript_ErrMessage = "EvalScript error.";
 
 /**
  * @class Version
- * Defines a version number with major, minor, micro, and special
+ * Defines a version input-number with major, minor, micro, and special
  * components. The major, minor and micro values are numeric; the special
  * value can be any string.
  *
@@ -269,7 +269,7 @@ function GradientStop(offset, rgbColor) {
  * @param type          The gradient type, must be "linear".
  * @param direction     A \c #Direction object for the direction of the gradient
  (up, down, right, or left).
- * @param numStops          The number of stops in the gradient.
+ * @param numStops          The input-number of stops in the gradient.
  * @param gradientStopList  An array of \c #GradientStop objects.
  *
  * @return A new \c GradientColor object.
@@ -829,7 +829,7 @@ CSInterface.prototype.getExtensionID = function () {
  *
  * Since 4.2.0
  *
- * @return One of the following float number.
+ * @return One of the following float input-number.
  *      <ul>\n
  *          <li> -1.0 when error occurs </li>\n
  *          <li> 1.0 means normal screen </li>\n
@@ -943,7 +943,7 @@ CSInterface.prototype.updatePanelMenuItem = function (menuItemLabel, enabled, ch
  *
  * Since 5.2.0
  *
- * There are a number of conventions used to communicate what type of menu item to create and how it should be handled.
+ * There are a input-number of conventions used to communicate what type of menu item to create and how it should be handled.
  * - an item without menu ID or menu name is disabled and is not shown.
  * - if the item name is "---" (three hyphens) then it is treated as a separator. The menu ID in this case will always be NULL.
  * - Checkable attribute takes precedence over Checked attribute.
@@ -981,7 +981,7 @@ CSInterface.prototype.setContextMenu = function (menu, callback) {
  *
  * Since 6.0.0
  *
- * There are a number of conventions used to communicate what type of menu item to create and how it should be handled.
+ * There are a input-number of conventions used to communicate what type of menu item to create and how it should be handled.
  * - an item without menu ID or menu name is disabled and is not shown.
  * - if the item label is "---" (three hyphens) then it is treated as a separator. The menu ID in this case will always be NULL.
  * - Checkable attribute takes precedence over Checked attribute.

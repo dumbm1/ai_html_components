@@ -1,0 +1,44 @@
+/**
+* resurces
+* https://ru.stackoverflow.com/questions/671502/%D0%A1%D1%82%D0%B8%D0%BB%D0%B8%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C-input-type-range-%D0%BF%D0%B5%D1%80%D0%B5%D0%B4-%D0%BF%D0%BE%D0%BB%D0%B7%D1%83%D0%BD%D0%BA%D0%BE%D0%BC
+* https://atuin.ru/blog/oformlenie-polzunka-input-typerange/
+* https://html5css.ru/howto/howto_js_rangeslider.php
+*/
+
+.slider {
+ display: block;
+ width: 100%;
+ padding-top: 1rem;
+ padding-bottom: 1rem;
+}
+
+/*input[type='range']::-webkit-slider-thumb {}
+
+input[type='range']::-webkit-slider-runnable-track {}*/
+
+input[type='range'] {
+ overflow: hidden;
+ width: 100%;
+ -webkit-appearance: none;
+ background-color: var(--border-primary);
+ border-radius: 20px;
+ margin-top: 10px;
+ outline: none;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+ height: 10px;
+ -webkit-appearance: none;
+
+ margin-top: -20px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+ border-radius: 50%;
+ width: 30px;
+ -webkit-appearance: none;
+ height: 30px;
+ cursor: ew-resize;
+ background: var(--blue-2);
+ box-shadow: calc(-100vw) 0 0 calc(100vw - 10px) var(--blue-1);
+}

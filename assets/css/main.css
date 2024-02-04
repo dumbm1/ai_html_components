@@ -7,7 +7,9 @@
 @import "../../components/footer/footer.css";
 @import "../../components/container/container.css";
 @import "../../components/accordion/accordion.css";
-@import "../../components/input-number/input-number.css";
+@import "../../components/number/number.css";
+@import "../../components/select/select.css";
+@import "../../components/range-slider/range-slider.css";
 
 
 body {
