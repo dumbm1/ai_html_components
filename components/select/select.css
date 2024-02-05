@@ -42,6 +42,10 @@ select::-webkit-scrollbar-thumb:hover {
  margin: -1rem;
 }
 
+.select__optgroup {
+ font-size: .5rem;
+}
+
 .select__option:last-child {
  visibility: hidden;
  font-size: 0.5rem;

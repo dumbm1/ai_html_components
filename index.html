@@ -7,10 +7,6 @@
         <link rel="stylesheet" href="assets/css/main.css">
 
         <style>
-         optgroup {
-          font-size: .5rem;
-         }
-
         </style>
     </head>
     <body>
@@ -77,7 +73,7 @@
                         <option value="50" class="select__option">50</option>
                         <option value="51" class="select__option" disabled>placehold</option>
                     </select>-->
-                    <select class="select select_number">
+                    <select id="select_number" class="select select_number">
                         <option value="1" class="select__option">1</option>
                         <option value="2" class="select__option">2</option>
                         <option value="3" class="select__option">3</option>
@@ -134,15 +130,15 @@
                         <option value="50" class="select__option">50</option>
                         <option value="51" class="select__option" disabled>placehold</option>
                     </select>
-                    <input type="number" class="number__field">
-                    <button class="btn btn_input btn_input_plus">+</button>
-                    <button class="btn btn_input btn_input_minus">-</button>
+                    <input id="input_number" type="number" class="number__field" value="10">
+                    <button id="btn_plus" class="btn btn_input btn_input_plus">+</button>
+                    <button id="btn_minus" class="btn btn_input btn_input_minus">-</button>
                     <div class="number__border"></div>
                 </div>
 
                 <div class="slider">
-					<input type="range" min="1" max="100" value="10" class="slider__elem" id="slider__elem">
-				</div>
+                    <input id="range_slider" type="range" min="1" max="100" value="10" class="slider__elem">
+                </div>
 
                 <div class="page__line-sep"></div>
             </div>
@@ -196,5 +192,94 @@
         <script src="assets/js/reloadPanel.js"></script>
         <script defer src="assets/js/main.js"></script>
 
+        <script>
+
+          setInputNumber({
+                           selectElem: document.getElementById('select_number'),
+                           inputField: document.getElementById('input_number'),
+                           rangeSlider: document.getElementById('range_slider'),
+                           btnPlus: document.getElementById('btn_plus'),
+                           btnMinus: document.getElementById('btn_minus'),
+                         });
+
+          function setInputNumber(opts) {
+
+            const selectElem = opts.selectElem;
+            const selectOptions = selectElem.querySelectorAll('option');
+
+            const inputField = opts.inputField;
+            const btnPlus = opts.btnPlus;
+            const btnMinus = opts.btnMinus;
+            const rangeSlider = opts.rangeSlider;
+
+            const throttle = (func, delay) => {
+              // Previously called time of the function
+              let prev = 0;
+              return (...args) => {
+                // Current called time of the function
+                let now = new Date().getTime();
+
+                // Logging the difference
+                // between previously
+                // called and current called timings
+                console.log(now - prev, delay);
+
+                // If difference is greater
+                // than delay call
+                // the function again.
+                if (now - prev > delay) {
+                  prev = now;
+
+                  // "..." is the spread
+                  // operator here
+                  // returning the function with the
+                  // array of arguments
+                  return func(...args);
+                }
+              };
+            };
+
+            btnPlus.addEventListener('click', (e) => {
+              let currentValue = ++inputField.value;
+
+              inputField.value = currentValue;
+              rangeSlider.value = currentValue;
+              selectElem.selectedIndex = currentValue - 1;
+            });
+
+            btnMinus.addEventListener('click', (e) => {
+              let currentValue = --inputField.value;
+
+              inputField.value = currentValue;
+              rangeSlider.value = currentValue;
+              selectElem.selectedIndex = currentValue - 1;
+            });
+
+            rangeSlider.addEventListener('input', throttle(() => {
+              let currentValue = rangeSlider.value;
+
+              inputField.value = currentValue;
+              selectElem.selectedIndex = currentValue - 1;
+
+            }, 200));
+
+            selectElem.addEventListener('change', (e) => {
+              let num = selectOptions[selectElem.selectedIndex];
+              let currentValue = num.value;
+
+              inputField.value = currentValue;
+              rangeSlider.value = currentValue;
+            });
+
+            inputField.addEventListener('change', (e)=>{
+              let currentValue = inputField.value;
+
+              rangeSlider.value = currentValue;
+              selectElem.selectedIndex = currentValue - 1;
+            })
+          }
+
+        </script>
+        <!--        <img id="img" src="https://en.js.cx/clipart/train.gif?speed=1&cache=0">-->
     </body>
 </html>
