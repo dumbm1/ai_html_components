@@ -20,6 +20,8 @@ select::-webkit-scrollbar-thumb:hover {
 .select {
  background: var(--bg-primary);
  color: var(--color-primary);
+ padding-left: .5rem;
+ /*marign-left: -.5rem;*/
 }
 
 .select_number {
@@ -40,11 +42,6 @@ select::-webkit-scrollbar-thumb:hover {
  margin: -1rem;
 }
 
-.select {
- padding-left: .5rem;
- marign-left: -.5rem;
-}
-
 .select__option:last-child {
  visibility: hidden;
  font-size: 0.5rem;
@@ -52,4 +49,9 @@ select::-webkit-scrollbar-thumb:hover {
 
 .select__option:nth-child(11n) {
  font-size: 0.5rem;
+}
+
+.select:hover {
+ cursor: pointer;
+ background: var(--button-hover);
 }

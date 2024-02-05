@@ -80,6 +80,7 @@
 
  --success: var(--success-1);
  --info: var(--info-1);
+ --blue: var(--blue-2);
 }
 
 html[data-theme='light'] {
@@ -103,6 +104,7 @@ html[data-theme='light'] {
 
  --success: var(--success-2);
  --info: var(--info-1);
+ --blue: var(--blue-2);
 }
 
 html[data-theme='dark'] {
@@ -126,6 +128,7 @@ html[data-theme='dark'] {
 
  --success: var(--success-2);
  --info: var(--info-2);
+ --blue: var(--blue-1);
 }
 
 html[data-theme='darker'] {
@@ -149,4 +152,5 @@ html[data-theme='darker'] {
 
  --success: var(--success-2);
  --info: var(--info-2);
+ --blue: var(--blue-1);
 }

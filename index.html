@@ -1,198 +1,200 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>ai-html-components</title>
-		<link rel="stylesheet" href="assets/css/main.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ai-html-components</title>
+        <link rel="stylesheet" href="assets/css/main.css">
 
-		<style>
+        <style>
          optgroup {
           font-size: .5rem;
          }
 
-		</style>
-	</head>
-	<body>
+        </style>
+    </head>
+    <body>
 
-		<div class="page">
-			<div class="page__section">
-				<span>Главная секция</span>
+        <div class="page">
+            <div class="page__section">
+                <span>Главная секция</span>
 
-				<div class="number">
-					<!--<select class="select select_number">
-						<option value="1" class="select__option">1</option>
-						<option value="2" class="select__option">2</option>
-						<option value="3" class="select__option">3</option>
-						<option value="4" class="select__option">4</option>
-						<option value="5" class="select__option">5</option>
-						<option value="6" class="select__option">6</option>
-						<option value="7" class="select__option">7</option>
-						<option value="8" class="select__option">8</option>
-						<option value="9" class="select__option">9</option>
-						<option value="10" class="select__option" selected>10</option>
-						<option value="10" class="select__option" disabled>_____</option>
-						<option value="11" class="select__option">11</option>
-						<option value="12" class="select__option">12</option>
-						<option value="13" class="select__option">13</option>
-						<option value="14" class="select__option">14</option>
-						<option value="15" class="select__option">15</option>
-						<option value="16" class="select__option">16</option>
-						<option value="17" class="select__option">17</option>
-						<option value="18" class="select__option">18</option>
-						<option value="19" class="select__option">19</option>
-						<option value="20" class="select__option">20</option>
-						<option value="20" class="select__option" disabled>_____</option>
-						<option value="21" class="select__option">21</option>
-						<option value="22" class="select__option">22</option>
-						<option value="23" class="select__option">23</option>
-						<option value="24" class="select__option">24</option>
-						<option value="25" class="select__option">25</option>
-						<option value="26" class="select__option">26</option>
-						<option value="27" class="select__option">27</option>
-						<option value="28" class="select__option">28</option>
-						<option value="29" class="select__option">29</option>
-						<option value="30" class="select__option">30</option>
-						<option value="30" class="select__option" disabled>_____</option>
-						<option value="31" class="select__option">31</option>
-						<option value="32" class="select__option">32</option>
-						<option value="33" class="select__option">33</option>
-						<option value="34" class="select__option">34</option>
-						<option value="35" class="select__option">35</option>
-						<option value="36" class="select__option">36</option>
-						<option value="37" class="select__option">37</option>
-						<option value="38" class="select__option">38</option>
-						<option value="39" class="select__option">39</option>
-						<option value="40" class="select__option">40</option>
-						<option value="40" class="select__option" disabled>_____</option>
-						<option value="41" class="select__option">41</option>
-						<option value="42" class="select__option">42</option>
-						<option value="43" class="select__option">43</option>
-						<option value="44" class="select__option">44</option>
-						<option value="45" class="select__option">45</option>
-						<option value="46" class="select__option">46</option>
-						<option value="47" class="select__option">47</option>
-						<option value="48" class="select__option">48</option>
-						<option value="49" class="select__option">49</option>
-						<option value="50" class="select__option">50</option>
-						<option value="51" class="select__option" disabled>placehold</option>
-					</select>-->
-					<select class="select select_number">
-						<option value="1" class="select__option">1</option>
-						<option value="2" class="select__option">2</option>
-						<option value="3" class="select__option">3</option>
-						<option value="4" class="select__option">4</option>
-						<option value="5" class="select__option">5</option>
-						<option value="6" class="select__option">6</option>
-						<option value="7" class="select__option">7</option>
-						<option value="8" class="select__option">8</option>
-						<option value="9" class="select__option">9</option>
-						<option value="10" class="select__option" selected>10</option>
-						<optgroup class="select__optgroup" label="───"></optgroup>
-						<option value="11" class="select__option">11</option>
-						<option value="12" class="select__option">12</option>
-						<option value="13" class="select__option">13</option>
-						<option value="14" class="select__option">14</option>
-						<option value="15" class="select__option">15</option>
-						<option value="16" class="select__option">16</option>
-						<option value="17" class="select__option">17</option>
-						<option value="18" class="select__option">18</option>
-						<option value="19" class="select__option">19</option>
-						<option value="20" class="select__option">20</option>
-						<optgroup class="select__optgroup" label="───"></optgroup>
-						<option value="21" class="select__option">21</option>
-						<option value="22" class="select__option">22</option>
-						<option value="23" class="select__option">23</option>
-						<option value="24" class="select__option">24</option>
-						<option value="25" class="select__option">25</option>
-						<option value="26" class="select__option">26</option>
-						<option value="27" class="select__option">27</option>
-						<option value="28" class="select__option">28</option>
-						<option value="29" class="select__option">29</option>
-						<option value="30" class="select__option">30</option>
-						<optgroup class="select__optgroup" label="───"></optgroup>
-						<option value="31" class="select__option">31</option>
-						<option value="32" class="select__option">32</option>
-						<option value="33" class="select__option">33</option>
-						<option value="34" class="select__option">34</option>
-						<option value="35" class="select__option">35</option>
-						<option value="36" class="select__option">36</option>
-						<option value="37" class="select__option">37</option>
-						<option value="38" class="select__option">38</option>
-						<option value="39" class="select__option">39</option>
-						<option value="40" class="select__option">40</option>
-						<optgroup class="select__optgroup" label="───"></optgroup>
-						<option value="41" class="select__option">41</option>
-						<option value="42" class="select__option">42</option>
-						<option value="43" class="select__option">43</option>
-						<option value="44" class="select__option">44</option>
-						<option value="45" class="select__option">45</option>
-						<option value="46" class="select__option">46</option>
-						<option value="47" class="select__option">47</option>
-						<option value="48" class="select__option">48</option>
-						<option value="49" class="select__option">49</option>
-						<option value="50" class="select__option">50</option>
-						<option value="51" class="select__option" disabled>placehold</option>
-					</select>
-					<input type="number" class="number__field">
-					<button class="btn btn_input btn_input_plus">+</button>
-					<button class="btn btn_input btn_input_minus">-</button>
-					<div class="number__border"></div>
+                <div class="number">
+                    <!--<select class="select select_number">
+                        <option value="1" class="select__option">1</option>
+                        <option value="2" class="select__option">2</option>
+                        <option value="3" class="select__option">3</option>
+                        <option value="4" class="select__option">4</option>
+                        <option value="5" class="select__option">5</option>
+                        <option value="6" class="select__option">6</option>
+                        <option value="7" class="select__option">7</option>
+                        <option value="8" class="select__option">8</option>
+                        <option value="9" class="select__option">9</option>
+                        <option value="10" class="select__option" selected>10</option>
+                        <option value="10" class="select__option" disabled>_____</option>
+                        <option value="11" class="select__option">11</option>
+                        <option value="12" class="select__option">12</option>
+                        <option value="13" class="select__option">13</option>
+                        <option value="14" class="select__option">14</option>
+                        <option value="15" class="select__option">15</option>
+                        <option value="16" class="select__option">16</option>
+                        <option value="17" class="select__option">17</option>
+                        <option value="18" class="select__option">18</option>
+                        <option value="19" class="select__option">19</option>
+                        <option value="20" class="select__option">20</option>
+                        <option value="20" class="select__option" disabled>_____</option>
+                        <option value="21" class="select__option">21</option>
+                        <option value="22" class="select__option">22</option>
+                        <option value="23" class="select__option">23</option>
+                        <option value="24" class="select__option">24</option>
+                        <option value="25" class="select__option">25</option>
+                        <option value="26" class="select__option">26</option>
+                        <option value="27" class="select__option">27</option>
+                        <option value="28" class="select__option">28</option>
+                        <option value="29" class="select__option">29</option>
+                        <option value="30" class="select__option">30</option>
+                        <option value="30" class="select__option" disabled>_____</option>
+                        <option value="31" class="select__option">31</option>
+                        <option value="32" class="select__option">32</option>
+                        <option value="33" class="select__option">33</option>
+                        <option value="34" class="select__option">34</option>
+                        <option value="35" class="select__option">35</option>
+                        <option value="36" class="select__option">36</option>
+                        <option value="37" class="select__option">37</option>
+                        <option value="38" class="select__option">38</option>
+                        <option value="39" class="select__option">39</option>
+                        <option value="40" class="select__option">40</option>
+                        <option value="40" class="select__option" disabled>_____</option>
+                        <option value="41" class="select__option">41</option>
+                        <option value="42" class="select__option">42</option>
+                        <option value="43" class="select__option">43</option>
+                        <option value="44" class="select__option">44</option>
+                        <option value="45" class="select__option">45</option>
+                        <option value="46" class="select__option">46</option>
+                        <option value="47" class="select__option">47</option>
+                        <option value="48" class="select__option">48</option>
+                        <option value="49" class="select__option">49</option>
+                        <option value="50" class="select__option">50</option>
+                        <option value="51" class="select__option" disabled>placehold</option>
+                    </select>-->
+                    <select class="select select_number">
+                        <option value="1" class="select__option">1</option>
+                        <option value="2" class="select__option">2</option>
+                        <option value="3" class="select__option">3</option>
+                        <option value="4" class="select__option">4</option>
+                        <option value="5" class="select__option">5</option>
+                        <option value="6" class="select__option">6</option>
+                        <option value="7" class="select__option">7</option>
+                        <option value="8" class="select__option">8</option>
+                        <option value="9" class="select__option">9</option>
+                        <option value="10" class="select__option" selected>10</option>
+                        <optgroup class="select__optgroup" label="───"></optgroup>
+                        <option value="11" class="select__option">11</option>
+                        <option value="12" class="select__option">12</option>
+                        <option value="13" class="select__option">13</option>
+                        <option value="14" class="select__option">14</option>
+                        <option value="15" class="select__option">15</option>
+                        <option value="16" class="select__option">16</option>
+                        <option value="17" class="select__option">17</option>
+                        <option value="18" class="select__option">18</option>
+                        <option value="19" class="select__option">19</option>
+                        <option value="20" class="select__option">20</option>
+                        <optgroup class="select__optgroup" label="───"></optgroup>
+                        <option value="21" class="select__option">21</option>
+                        <option value="22" class="select__option">22</option>
+                        <option value="23" class="select__option">23</option>
+                        <option value="24" class="select__option">24</option>
+                        <option value="25" class="select__option">25</option>
+                        <option value="26" class="select__option">26</option>
+                        <option value="27" class="select__option">27</option>
+                        <option value="28" class="select__option">28</option>
+                        <option value="29" class="select__option">29</option>
+                        <option value="30" class="select__option">30</option>
+                        <optgroup class="select__optgroup" label="───"></optgroup>
+                        <option value="31" class="select__option">31</option>
+                        <option value="32" class="select__option">32</option>
+                        <option value="33" class="select__option">33</option>
+                        <option value="34" class="select__option">34</option>
+                        <option value="35" class="select__option">35</option>
+                        <option value="36" class="select__option">36</option>
+                        <option value="37" class="select__option">37</option>
+                        <option value="38" class="select__option">38</option>
+                        <option value="39" class="select__option">39</option>
+                        <option value="40" class="select__option">40</option>
+                        <optgroup class="select__optgroup" label="───"></optgroup>
+                        <option value="41" class="select__option">41</option>
+                        <option value="42" class="select__option">42</option>
+                        <option value="43" class="select__option">43</option>
+                        <option value="44" class="select__option">44</option>
+                        <option value="45" class="select__option">45</option>
+                        <option value="46" class="select__option">46</option>
+                        <option value="47" class="select__option">47</option>
+                        <option value="48" class="select__option">48</option>
+                        <option value="49" class="select__option">49</option>
+                        <option value="50" class="select__option">50</option>
+                        <option value="51" class="select__option" disabled>placehold</option>
+                    </select>
+                    <input type="number" class="number__field">
+                    <button class="btn btn_input btn_input_plus">+</button>
+                    <button class="btn btn_input btn_input_minus">-</button>
+                    <div class="number__border"></div>
+                </div>
+
+                <div class="slider">
+					<input type="range" min="1" max="100" value="10" class="slider__elem" id="slider__elem">
 				</div>
 
-				<input type="range" min="1" max="100" value="10" class="slider" id="myRange">
+                <div class="page__line-sep"></div>
+            </div>
 
-				<div class="page__line-sep"></div>
-			</div>
+            <div class="page__section">
+                <div class="accordion">
+                    <details class="accordion__details">
+                        <summary class="accordion__summary">
+                            Секция установок
+                            <!--<svg class="icon accordion__arrow-down">
+                                <use href="assets/img/serviceIcon/iconSprite.svg#arrow-down"></use>
+                            </svg>-->
+                        </summary>
+                        <p class="accordion__content">
+                            AI-инструменты сделали большой шаг вперёд за последние несколько лет. Они могут стать
+                            полезным подспорьем и экономить ваше время на самых разных задачах.</p>
 
-			<div class="page__section">
-				<div class="accordion">
-					<details class="accordion__details">
-						<summary class="accordion__summary">
-							Секция установок
-							<!--<svg class="icon accordion__arrow-down">
-								<use href="assets/img/serviceIcon/iconSprite.svg#arrow-down"></use>
-							</svg>-->
-						</summary>
-						<p class="accordion__content">
-							AI-инструменты сделали большой шаг вперёд за последние несколько лет. Они могут стать
-							полезным подспорьем и экономить ваше время на самых разных задачах.</p>
+                        <p class="accordion__content">На этом интенсиве мы разберём, как помощник Github Copilot и
+                            другие AI-инструменты могут сделать написание кода, а также тестов, документации и пр. -
+                            быстрее и проще. Научиться эффективно их использовать. Понять, что они могут делать, а что -
+                            пока не очень.</p>
 
-						<p class="accordion__content">На этом интенсиве мы разберём, как помощник Github Copilot и
-							другие AI-инструменты могут сделать написание кода, а также тестов, документации и пр. -
-							быстрее и проще. Научиться эффективно их использовать. Понять, что они могут делать, а что -
-							пока не очень.</p>
+                        <p class="accordion__content">Обратите внимание, на ряде территорий, включая Россию и Беларусь
+                            AI-инструменты работают только при наличии зарубежного VPN или прокси-сервера.
+                        </p>
+                    </details>
+                </div>
+                <div class="page__line-sep"></div>
+            </div>
+            <footer class="footer">
+                <span class="footer_j-s-start">button section</span>
+                <svg class="icon">
+                    <use href="assets/img/serviceIcon/iconSprite.svg#list"></use>
+                </svg>
+                <svg class="icon">
+                    <use href="assets/img/serviceIcon/iconSprite.svg#github"></use>
+                </svg>
+                <svg class="icon">
+                    <use href="assets/img/serviceIcon/iconSprite.svg#tooltip"></use>
+                </svg>
+                <button class="btn " id="reload_btn">Reload</button>
+            </footer>
 
-						<p class="accordion__content">Обратите внимание, на ряде территорий, включая Россию и Беларусь
-							AI-инструменты работают только при наличии зарубежного VPN или прокси-сервера.
-						</p>
-					</details>
-				</div>
-				<div class="page__line-sep"></div>
-			</div>
-			<footer class="footer">
-				<span class="footer_j-s-start">button section</span>
-				<svg class="icon">
-					<use href="assets/img/serviceIcon/iconSprite.svg#list"></use>
-				</svg>
-				<svg class="icon">
-					<use href="assets/img/serviceIcon/iconSprite.svg#github"></use>
-				</svg>
-				<svg class="icon">
-					<use href="assets/img/serviceIcon/iconSprite.svg#tooltip"></use>
-				</svg>
-				<button class="btn " id="reload_btn">Reload</button>
-			</footer>
+        </div>
 
-		</div>
+        <script src="assets/js/CSInterface.js"></script>
+        <script src="assets/js/newCSInterface.js"></script>
+        <script src="assets/js/themeChanger.js"></script>
+        <script src="assets/js/accordion.js"></script>
+        <script src="assets/js/fitPanelToContent.js"></script>
+        <script src="assets/js/reloadPanel.js"></script>
+        <script defer src="assets/js/main.js"></script>
 
-		<script src="assets/js/CSInterface.js"></script>
-		<script src="assets/js/newCSInterface.js"></script>
-		<script src="assets/js/themeChanger.js"></script>
-		<script src="assets/js/accordion.js"></script>
-		<script src="assets/js/fitPanelToContent.js"></script>
-		<script src="assets/js/reloadPanel.js"></script>
-		<script defer src="assets/js/main.js"></script>
-
-	</body>
+    </body>
 </html>
