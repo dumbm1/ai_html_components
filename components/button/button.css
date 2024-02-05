@@ -24,10 +24,12 @@
 
 .btn_input_plus {
  left: 1px;
+ left: 1.9rem;
 }
 
 .btn_input_minus {
  left: 1.9rem;
+ left: 1px;
 }
 
 .btn:hover {

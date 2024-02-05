@@ -33,20 +33,8 @@ input[type="number"]::-webkit-outer-spin-button {
  border: 1px solid var(--border-primary);
  border-radius: .2rem;
  font-weight: 400;
- padding: 0 0 0 4.5rem;
+ padding: 0 3rem 0 5rem;
  box-sizing: border-box;
-}
-
-.number__btn_plus {
- left: 0;
-}
-
-.number__btn_minus {
- left: 2rem;
-}
-
-.number__btn_arrow {
- right: 1px;
 }
 
 .number:active {
