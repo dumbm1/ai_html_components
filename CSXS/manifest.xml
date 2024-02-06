@@ -69,11 +69,10 @@
                         </MaxSize>
                     </Geometry>
                     <Icons>
-                        <Icon Type="Normal">./assets/img/appIcon/iconNormal.png</Icon>
-                        <Icon Type="RollOver">./assets/img/appIcon/iconRollover.png</Icon>
-                        <Icon Type="Disabled">./assets/img/appIcon/iconDisabled.png</Icon>
-                        <Icon Type="DarkNormal">./assets/img/appIcon/iconDarkNormal.png</Icon>
-                        <Icon Type="DarkRollOver">./assets/img/appIcon/iconDarkRollover.png</Icon>
+                        <Icon Type="Normal">./assets/img/appIcon/icon_Light.png</Icon>
+                        <Icon Type="RollOver">./assets/img/appIcon/icon_Light.png</Icon>
+                        <Icon Type="DarkNormal">./assets/img/appIcon/icon_Dark.png</Icon>
+                        <Icon Type="DarkRollOver">./assets/img/appIcon/icon_Dark.png</Icon>
                     </Icons>
                 </UI>
             </DispatchInfo>
