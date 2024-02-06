@@ -51,25 +51,6 @@ function setInputNumber(opts) {
     return wrapper;
   };
 
-  btnPlus.addEventListener('click', (e) => {
-    let currentValue = ++inputField.value;
-    if (e.shiftKey) currentValue += 4;
-
-    inputField.value = currentValue;
-    rangeSlider.value = currentValue;
-    selectElem.selectedIndex = currentValue - 1;
-  });
-
-  btnMinus.addEventListener('click', (e) => {
-    let currentValue = --inputField.value;
-    if (e.shiftKey) currentValue -= 4;
-    if (currentValue <= -1) currentValue = 0;
-
-    inputField.value = currentValue;
-    rangeSlider.value = currentValue;
-    selectElem.selectedIndex = currentValue - 1;
-  });
-
   /*
    rangeSlider.addEventListener('input', throttleDoca(() => {
    let currentValue = rangeSlider.value;
@@ -116,9 +97,19 @@ function setInputNumber(opts) {
     }
   });
 
+  btnPlus.addEventListener('click', (e) => {
+    let currentValue = ++inputField.value;
+    if (e.shiftKey) currentValue += 4;
+
+    inputField.value = currentValue;
+    rangeSlider.value = currentValue;
+    selectElem.selectedIndex = currentValue - 1;
+  });
+
   btnPlus.addEventListener('mousedown', function f(e) {
 
     let i = +inputField.value;
+
     let a = setInterval(() => {
       if (e.shiftKey) {
         i += 5;
@@ -127,10 +118,45 @@ function setInputNumber(opts) {
       }
 
       inputField.value = i;
-      if (i >= 1000) clearInterval(a);
+      rangeSlider.value = i;
+      selectElem.selectedIndex = i - 1;
+
     }, 200);
 
     btnPlus.addEventListener('mouseup', (e) => {
+      clearInterval(a);
+    });
+  });
+
+  btnMinus.addEventListener('click', (e) => {
+    let currentValue = --inputField.value;
+    if (e.shiftKey) currentValue -= 4;
+    if (currentValue <= -1) currentValue = 0;
+
+    inputField.value = currentValue;
+    rangeSlider.value = currentValue;
+    selectElem.selectedIndex = currentValue - 1;
+  });
+
+  btnMinus.addEventListener('mousedown', function f(e) {
+
+    let i = +inputField.value;
+
+    let a = setInterval(() => {
+      if (e.shiftKey) {
+        i -= 5;
+      } else {
+        i--;
+      }
+
+      if (i <= -1) i = 0;
+
+      inputField.value = i;
+      rangeSlider.value = i;
+      selectElem.selectedIndex = i - 1;
+    }, 200);
+
+    btnMinus.addEventListener('mouseup', (e) => {
       clearInterval(a);
     });
   });
