@@ -4,16 +4,16 @@
 * https://atuin.ru/blog/oformlenie-polzunka-input-typerange/
 * https://html5css.ru/howto/howto_js_rangeslider.php
 */
-.slider{
+.range{
  height: 4rem;
  width: 100%;
  padding: 0;
  display: flex;
  flex-direction: column;
  justify-content: center;
-
 }
-.slider__elem {
+
+.range__elem {
  -webkit-appearance: none;
  width: 100%;
  height: .2rem;
@@ -25,7 +25,7 @@
  transition: opacity .2s;
 }
 
-.slider__elem::-webkit-slider-thumb {
+.range__elem::-webkit-slider-thumb {
  -webkit-appearance: none;
  appearance: none;
  width: 1.4rem;
@@ -35,6 +35,6 @@
  /*cursor: ew-resize;*/
  cursor: pointer;
 }
-.slider__elem:hover {
+.range__elem:hover {
  opacity: 1;
 }

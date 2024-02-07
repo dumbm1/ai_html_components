@@ -1,0 +1,52 @@
+/**
+ * Source
+ * https://codepen.io/leemark/pen/neXrjb
+ */
+
+
+
+.color-range {
+ background-color: var(--bg-primary);
+ text-align: center;
+ padding: 40px 0 0 0;
+}
+
+.color-range__range-set {
+ border: none;
+ display: grid;
+ gap: 1.5rem;
+ grid-template-columns: auto 1fr auto;
+ align-items: center;
+}
+
+.color-range__output {
+ display: inline-block;
+ min-width: 2.5em;
+}
+
+.color-range__label, .color-range__output {
+ padding: 2px 9px;
+ border-radius: 3px;
+ font-weight: bold;
+ color: var(--black);
+ font-size: 1.1em;
+}
+
+.color-range_bg_r, label[for=r], output[for=r] {
+ background-color: var(--rgb-r);
+}
+
+.color-range_bg_g, label[for=g], output[for=g] {
+ background-color: var(--rgb-g);
+}
+
+.color-range_bg_b, label[for=b], output[for=b] {
+ background-color: var(--rgb-b);
+}
+
+.color-range__hex-value {
+ min-width: 4.5em;
+ font-size: 3em;
+ font-weight: bold;
+ background: rgba(255, 255, 255, .3);
+}

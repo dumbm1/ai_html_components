@@ -28,6 +28,13 @@
  --info-1: #0085ff;
  --info-2: #00beff;
 
+ --rgb-r: #ff0000;
+ --rgb-g: #00ff00;
+ --rgb-b: #0000ff;
+ --cmyk-c: #00aeef;
+ --cmyk-m: #ec008c;
+ --cmyk-y: #fff200;
+
  /**
  * Semantic layer of the color variables.
  */

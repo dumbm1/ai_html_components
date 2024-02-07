@@ -1,0 +1,47 @@
+<!--
+ https://codepen.io/leemark/pen/neXrjb
+-->
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>color-slider</title>
+        <link rel="stylesheet" href="../../assets/css/main.css">
+        <link rel="stylesheet" href="color-range.css">
+        <script defer src="color-range.js"></script>
+    </head>
+    <body>
+
+        <section class="color-range">
+
+            <fieldset class="color-range__range-set">
+                <label class="color-range__label" for="r">R</label>
+                <div class="range"><input class="range__elem color-slider__input" type="range" min="0" max="255"
+                                          id="r" step="1"
+                                          value="0"></div>
+                <output class="color-range__output" for="r" id="r_out">0</output>
+            </fieldset>
+
+            <fieldset class="color-range__range-set">
+                <label class="color-range__label" for="g">G</label>
+                <div class="range">
+                    <input class=" range__elem color-slider__input" type="range" min="0" max="255" id="g" step="1"
+                           value="0"></div>
+                <output class="color-range__output" for="g" id="g_out">0</output>
+            </fieldset>
+
+            <fieldset class="color-range__range-set">
+                <label class="color-range__label" for="b">B</label>
+                <div class="range"><input class="range__elem color-slider__input" type="range" min="0" max="255"
+                                          id="b" step="1"
+                                          value="0"></div>
+                <output class="color-range__output" for="b" id="b_out">0</output>
+            </fieldset>
+
+            <output class="color-range__hex-value" id="hex">#000000</output>
+        </section>
+
+    </body>
+</html>
+
